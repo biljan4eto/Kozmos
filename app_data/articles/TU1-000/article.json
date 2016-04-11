@@ -1,0 +1,21 @@
+{
+    "id": "TU1-000",
+    "title": "Naslov TU1-000",
+    "description": "Opis",
+    "authors": [
+        "Matjaž Mav",
+        "Žiga Černigoj"
+    ],
+    "date": "2016-04-11T12:17:00.000Z",
+    "content": "",
+    "images": [
+        {
+            "url": "http://placehold.it/300x250?text=Kozmos+Image+TU1-000",
+            "description": "Kozmos Image"
+        }
+    ],
+    "video": {
+        "url": "http://placehold.it/300x250?text=Kozmos+Video+TU1-000",
+        "description": "Kozmos Video"
+    }
+}
