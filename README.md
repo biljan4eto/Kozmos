@@ -1,2 +1,2 @@
 # Kozmos
-Desining web site for Kozmost project.
+Desining web site for Kozmos project.
