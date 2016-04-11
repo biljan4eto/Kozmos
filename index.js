@@ -21,24 +21,47 @@ kozmos.config(['$routeProvider', function($routeProvider) {
 
 kozmos.factory('appSettings', [function() {
     return {
-        "baseUrl": "http://localhost/"  
+        "baseUrl": "http://localhost"  
     };
 }]);
 
-kozmos.factory('getArticles', ['$http', function($http) {
+kozmos.factory('getArticles', ['$http', 'appSettings', function($http, appSettings) {
     return function() {
         return $http({
             method: 'GET',
-            url: 'http://localhost/app_data/articles.json?' + new Date().getTime()
+            url: appSettings.baseUrl + '/app_data/articles.json?' + new Date().getTime()
         });
     };
 }]);
 
-kozmos.factory('getArticle', ['$http', function($http) {
+kozmos.factory('getArticle', ['$http', 'appSettings', function($http, appSettings) {
     return function(articleId) {
         return $http({
             method: 'GET',
-            url: 'http://localhost/app_data/articles/' + articleId + '/article.json?' + new Date().getTime()
+            url: appSettings.baseUrl + '/app_data/articles/' + articleId + '/article.json?' + new Date().getTime()
         });
     };
 }]);
+
+kozmos.filter('toTrusted', ['$sce', function($sce){
+    return function(text) {
+        return $sce.trustAsHtml(text);
+    };
+}]);
+
+kozmos.filter('ellipsis', function() {
+    return function(text, length) {
+        if (!text) return '';
+        length = parseInt(length, 10);
+        if (!length) return text;
+        if (text.length <= length) return text;
+        text = text.substr(0, length);
+        return text + ' ...';
+    };
+});
+
+kozmos.directive('articleTile', function () {
+    return {
+        templateUrl: './directives/articleTile.html',
+    }
+});

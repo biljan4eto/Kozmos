@@ -1,21 +1,22 @@
 {
     "id": "TU1-001",
-    "title": "Naslov TU1-001",
-    "description": "Opis",
+    "title": "SETI's New Alien Life Hunt Targets 20,000 Small, Dim Stars",
+    "description": "Scientists with the SETI (Search for Extraterrestrial Intelligence) Institute in California have begun a two-year hunt for signs of alien civilizations around 20,000 red dwarfs — stars considerably smaller and dimmer than Earth's sun.",
     "authors": [
-        "Matjaž Mav",
-        "Žiga Černigoj"
+        "Mike Wall"
     ],
     "date": "2016-04-11T12:17:00.000Z",
-    "content": "",
+    "content": "The search for intelligent aliens has expanded to include thousands of star systems very different from that of Earth.<br/>Scientists with the SETI (Search for Extraterrestrial Intelligence) Institute in Mountain View, California have just begun a two-year hunt for signs of alien civilizations around 20,000 red dwarfs — stars considerably smaller and dimmer than Earth's sun.<br/>Red dwarfs are promising targets for SETI scientists. They are the most common stars in the Milky Way, making up about 75 percent of the galaxy's stellar population. And because red dwarfs burn through their fuel slowly, they live a long time; on average, the Milky Way's red dwarfs are billions of years older than the sun, researchers said.",
     "images": [
         {
-            "url": "http://placehold.it/300x250?text=Kozmos+Image+TU1-001",
-            "description": "Kozmos Image"
+            "url": "http://www.space.com/images/i/000/054/448/original/ata-new-2-560px-image.jpg",
+            "description": "The SETI Institute's Allen Telescope Array in Hat Creek, California is now searching 20,000 red dwarf stars for signs of intelligent life.",
+            "authors": ["Seth Shostak, SETI Institute"]
         }
     ],
     "video": {
         "url": "http://placehold.it/300x250?text=Kozmos+Video+TU1-001",
         "description": "Kozmos Video"
-    }
+    },
+    "other": "http://www.space.com/32422-seti-search-alien-life-red-dwarfs.html"
 }

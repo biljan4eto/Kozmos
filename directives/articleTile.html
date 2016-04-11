@@ -1,0 +1,14 @@
+<div id="{{article.id}}" class="article-tile row">
+    <div class="col-xs-6">
+        <img class="article-tile-image img-responsive center-block" ng-src="{{article.images[0].url}}">
+    </div>
+    <div class="col-xs-6">
+        <h4 class="article-tile-title">
+            <a href="#/article/{{article.id}}" ng-bind-html="article.title | toTrusted"></a>
+        </h4>
+        <p class="article-tile-description text-justify" ng-bind-html="article.description | ellipsis:300 | toTrusted"></p>
+        <p class="article-tile-more">
+            <a href="#/article/{{article.id}}"><b>Read more <span class="glyphicon glyphicon-chevron-right"></span></b></a>
+        </p>
+    </div>
+</div>
