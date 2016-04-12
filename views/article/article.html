@@ -16,16 +16,23 @@
         </p>
     </div>
     
-    <div class="article-video" ng-show="article.video">
+    <div class="article-video" ng-show="article.video.url">
         <div class="container">
             <div class="article-video-frame embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="{{article.video.url | toYouTubeOrigin | toTrustedResourceUrl}}"></iframe>
             </div>
-            <p class="article-video-description text-justify" ng-bind-html="article.video.description | toTrustedHtml"></p>
+            <div class="article-video-description text-justify" ng-bind-html="article.video.description | toTrustedHtml"></div>
+        </div>
+    </div>
+    
+    <div class="article-featured-image" ng-hide="article.video.url">
+        <div class="container">
+            <img class="article-featured-image-frame img-responsive center-block" ng-src="{{article.images[0].url}}" />
+            <div class="article-featured-image-description text-justify" ng-bind-html="article.images[0].description | toTrustedHtml"></div>
         </div>
     </div>
     
     <div class="container">
-        <p class="article-content text-justify" ng-bind-html="article.content | toTrustedHtml"></p>
+        <div class="article-content text-justify" ng-bind-html="article.content | toTrustedHtml"></div>
     </div>
 </div>

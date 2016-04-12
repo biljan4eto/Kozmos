@@ -23,14 +23,35 @@ body {
 /* Custom page CSS
 -------------------------------------------------- */
 
-div.article-video {
-    background-color: black;
+div.article-video, div.article-featured-image {
+    background-color: rgba(30, 30, 30, 1);
     color: white;
     
-    div.article-video-frame {
+    div.article-video-frame, div.article-featured-image-frame {
         margin: auto;
     }
-    p.article-video-description {
-        
+    div.article-video-description, div.article-featured-image-description{
+        margin: 10px 0px;
     }
 }
+
+div.article-content {
+    margin: 10px 0px;
+}
+
+
+
+    .caption {
+        width:100%;
+        bottom: .3rem;
+        position: absolute;
+        background-color: rgba(30, 30, 30, 1);
+        color: white;
+    }
+
+    .thumbnail {
+        border: 0 none;
+        box-shadow: none;
+        margin:0;
+        padding:0;
+    }
