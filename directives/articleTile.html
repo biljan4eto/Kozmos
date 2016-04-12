@@ -4,9 +4,9 @@
     </div>
     <div class="col-xs-6 article-tile-right">
         <h4 class="article-tile-title">
-            <a href="#/article/{{article.id}}" ng-bind-html="article.title | toTrusted"></a>
+            <a href="#/article/{{article.id}}" ng-bind-html="article.title | toTrustedHtml"></a>
         </h4>
-        <p class="article-tile-description text-justify" ng-bind-html="article.description | ellipsis:300 | toTrusted"></p>
+        <p class="article-tile-description text-justify" ng-bind-html="article.description | ellipsis:300 | toTrustedHtml"></p>
         <p class="article-tile-more">
             <a href="#/article/{{article.id}}"><b>Read more <span class="glyphicon glyphicon-chevron-right"></span></b></a>
         </p>

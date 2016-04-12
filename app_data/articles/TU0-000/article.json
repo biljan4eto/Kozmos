@@ -14,9 +14,6 @@
             "authors": []
         }
     ],
-    "video": {
-        "url": "http://placehold.it/300x250?text=Kozmos+Video+TU0-000",
-        "description": "Kozmos Video"
-    },
+    "video": null,
     "other": "http://www.space.com/32377-microbes-give-clues-about-ancient-life.html"
 }

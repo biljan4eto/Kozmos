@@ -1,1 +1,22 @@
-<div>{{article.title}}</div>
+<div id="{{article.id}}" class="article">
+    <h1 class="article-title">{{article.title | toTrustedHtml}}</h1>
+    
+    <p class="article-info">
+        <div class="article-date">{{article.date | date:'d. M. yyyy' }}</div>
+        <span class="article-authors comma-list">
+            <span class="comma-list-item" ng-repeat="author in article.authors">
+                {{author}}{{$last ? '' : ', '}}
+            </span>
+        </span>
+    </p>
+    
+    <div class="article-video">
+        <div class="article-video-frame embed-responsive embed-responsive-16by9" ng-show="article.video">
+            <iframe class="embed-responsive-item" src="{{article.video.url | toYouTubeOrigin | toTrustedResourceUrl}}"></iframe>
+        </div>
+        <p class="article-video-description text-justify" ng-bind-html="article.video.description | toTrustedHtml"></p>
+    </div>
+
+    <p class="article-description text-justify" ng-bind-html="article.description | toTrustedHtml"></p>
+    <p class="article-content text-justify" ng-bind-html="article.content | toTrustedHtml"></p>
+</div>

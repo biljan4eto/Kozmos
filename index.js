@@ -43,9 +43,22 @@ kozmos.factory('getArticle', ['$http', 'appSettings', function($http, appSetting
     };
 }]);
 
-kozmos.filter('toTrusted', ['$sce', function($sce){
+kozmos.filter('toTrustedHtml', ['$sce', function($sce){
     return function(text) {
         return $sce.trustAsHtml(text);
+    };
+}]);
+
+kozmos.filter('toTrustedResourceUrl', ['$sce', function($sce){
+    return function(url) {
+        return $sce.trustAsResourceUrl(url);
+    };
+}]);
+
+kozmos.filter('toYouTubeOrigin', [function(){
+    return function(url) {
+        if(!url) return null;
+        return url.replace('watch?v=', 'v/');
     };
 }]);
 

@@ -16,9 +16,6 @@
             ]
         }
     ],
-    "video": {
-        "url": "http://placehold.it/300x250?text=Kozmos+Video+TU0-001",
-        "description": "Kozmos Video"
-    },
+    "video": null,
     "other": "http://www.space.com/32089-intelligent-alien-life-search-earth-transit-zone.html"
 }
