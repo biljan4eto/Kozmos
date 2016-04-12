@@ -1,22 +1,31 @@
 <div id="{{article.id}}" class="article">
-    <h1 class="article-title">{{article.title | toTrustedHtml}}</h1>
     
-    <p class="article-info">
-        <div class="article-date">{{article.date | date:'d. M. yyyy' }}</div>
-        <span class="article-authors comma-list">
-            <span class="comma-list-item" ng-repeat="author in article.authors">
-                {{author}}{{$last ? '' : ', '}}
+    <div class="container">
+        <h1 class="article-title">
+            <span ng-bind-html="article.title | toTrustedHtml"></span><br/>
+            <small class="article-description text-justify" ng-bind-html="article.description | toTrustedHtml"></small>
+        </h1>
+        
+        <p class="article-info">
+            Published on <span class="article-date">{{article.date | date }}</span> by
+            <span class="article-authors">
+                <span ng-repeat="author in article.authors">
+                    <span class="article-author">{{author}}</span>{{$last ? '.' : ( ($index == (article.authors.length - 2)) ? ' and ' : ', ' )}}
             </span>
-        </span>
-    </p>
-    
-    <div class="article-video">
-        <div class="article-video-frame embed-responsive embed-responsive-16by9" ng-show="article.video">
-            <iframe class="embed-responsive-item" src="{{article.video.url | toYouTubeOrigin | toTrustedResourceUrl}}"></iframe>
-        </div>
-        <p class="article-video-description text-justify" ng-bind-html="article.video.description | toTrustedHtml"></p>
+            </span> 
+        </p>
     </div>
-
-    <p class="article-description text-justify" ng-bind-html="article.description | toTrustedHtml"></p>
-    <p class="article-content text-justify" ng-bind-html="article.content | toTrustedHtml"></p>
+    
+    <div class="article-video" ng-show="article.video">
+        <div class="container">
+            <div class="article-video-frame embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{article.video.url | toYouTubeOrigin | toTrustedResourceUrl}}"></iframe>
+            </div>
+            <p class="article-video-description text-justify" ng-bind-html="article.video.description | toTrustedHtml"></p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <p class="article-content text-justify" ng-bind-html="article.content | toTrustedHtml"></p>
+    </div>
 </div>
