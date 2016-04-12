@@ -21,8 +21,8 @@ kozmos.config(['$routeProvider', function($routeProvider) {
 
 kozmos.factory('appSettings', [function() {
     return {
-        "baseUrl": "http://localhost"  
-        //"baseUrl": "http://matjazmav.github.io/Kozmos"  
+        // "baseUrl": "http://localhost"  
+        "baseUrl": "http://matjazmav.github.io/Kozmos"  
     };
 }]);
 
