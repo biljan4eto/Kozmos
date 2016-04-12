@@ -25,22 +25,60 @@ body {
 /* Custom page CSS
 -------------------------------------------------- */
 
-div.article-video, div.article-featured-image {
-    background-color: rgba(30, 30, 30, 1);
-    color: white;
+body {
+    background-image: url('./background.jpg');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+div.article {
     
-    div.article-video-frame, div.article-featured-image-frame {
-        margin: auto;
+    h1.article-title {
+        color: white;
+        font-weight: bolder;
+        small {
+            color: white;
+            font-style: italic;
+        }
     }
-    div.article-video-description, div.article-featured-image-description{
+    
+    div.article-info {
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    div.article-video, div.article-featured-image {
+        background-color: rgba(30, 30, 30, 1);
+        color: white;
+        
+        div.article-video-frame, div.article-featured-image-frame {
+            margin: auto;
+        }
+        div.article-video-description, div.article-featured-image-description{
+            margin: 10px 0px;
+        }
+    }
+
+    div.article-content {
         margin: 10px 0px;
     }
-}
 
-div.article-content {
-    margin: 10px 0px;
+    > div.article-containter {
+        background-color: white;
+    }
+    
+    div.container-bottom-fill {
+        height: 50%;
+        position: absolute;
+        bottom: 0px;
+        z-index: -100;
+        right: 0px;
+        left: 0px;
+        background-color: white;
+    }
 }
-
 
 /*
 CUSTOM NAVBAR
