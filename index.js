@@ -49,7 +49,7 @@ kozmos.filter('toTrusted', ['$sce', function($sce){
     };
 }]);
 
-kozmos.filter('ellipsis', function() {
+kozmos.filter('ellipsis', [function() {
     return function(text, length) {
         if (!text) return '';
         length = parseInt(length, 10);
@@ -58,10 +58,10 @@ kozmos.filter('ellipsis', function() {
         text = text.substr(0, length);
         return text + ' ...';
     };
-});
+}]);
 
-kozmos.directive('articleTile', function () {
+kozmos.directive('articleTile', [function () {
     return {
         templateUrl: './directives/articleTile.html',
     }
-});
+}]);
