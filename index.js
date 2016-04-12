@@ -14,6 +14,10 @@ kozmos.config(['$routeProvider', function($routeProvider) {
            templateUrl: './views/about/about.html',
            controller: 'aboutCtrl' 
         }).
+        when('/new', {
+            templateUrl: './views/new/new.html',
+            controller: 'newCtrl'
+        }).
         otherwise({
            redirectTo: '/' 
         });
